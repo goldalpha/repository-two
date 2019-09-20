@@ -19,10 +19,17 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   background: image_url('positive.png');
-  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'pt_sans_captionregular';
 }
 
 .navbar {
   background: image_url('halftone-yellow.png');
-   box-shadow: 0px 1px 3px #2a2a2a;
+  box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #9443BC;
+  font-family: 'pt_sans_captionregular';
+  font-weight: 600;
+  letter-spacing: -0.3px;
 }
