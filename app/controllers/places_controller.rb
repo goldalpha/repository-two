@@ -5,13 +5,12 @@ class PlacesController < ApplicationController
     @places = Place.all
   end
 
-
   def new
     @place = Place.new
   end
 
   def create
-    current_user_places.create(place_params)
+    current_user.places.create(place_params)
     redirect_to root_path
   end
 
@@ -24,15 +23,14 @@ class PlacesController < ApplicationController
   end
 
   def update
-    @place = Place.find(params[:id])
-    @place.update_attributes(place_params)
-    redirect_to root_path
-  end 
+  @place = Place.find(params[:id])
+  @place.update_attributes(place_params)
+  redirect_to root_path
+end
 
   private
 
   def place_params
     params.require(:place).permit(:name, :description, :address)
   end
-  
 end
