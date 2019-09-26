@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Place.all.each do |a| 
+
+  a.address = "112 Main Street, Cambridge, MA 02139"
+  a.geocode
+  a.save
+
+
+end
