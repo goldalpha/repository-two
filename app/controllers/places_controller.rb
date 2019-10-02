@@ -62,3 +62,8 @@ end
     params.require(:place).permit(:name, :description, :address)
   end
 end
+
+def show
+  @place = Place.find(params[:id])
+  @photo = Photo.new
+end 
