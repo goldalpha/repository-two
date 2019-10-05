@@ -96,4 +96,16 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPSqWD7OC7eOJOsTO2wuOJ4IQ
     </blockquote>
   </div>
 <% end %>
+
+<% @place.photos.each do |photo| %>
+
+  <div class="col-12 col-sm-6">
+
+    <%= image_tag photo.picture.url %>
+
+  </div>
+
+<% end %>
+
 </div>
+
